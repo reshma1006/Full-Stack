@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <script>
+            function myfun(){
+
+                var user = document.getElementById("txtusername").value;
+                if(/^[A-Z][a-z0-9]{4,8}$/.test(user)){
+                    window.alert("valid ");
+                }
+                else{
+                    window.alert("invalid");
+                    doucment.getElementById("txtusername").focus();
+                }
+                
+                var pass = document.getElementById("txtpass").value;
+                if(/[A-Za-z0-9@$&]{6,20}$/.test(pass)){
+
+                    window.alert("valid password");
+
+                }
+                else{
+                    window.alert("invalid password");
+                    doucment.getElementById("txtpass").focus();
+                }
+        var val=document.getElementById("txtMobile").value;
+        if(/^[6-9][0-9]{9}$/.test(val)){
+            window.aler('Valid Number');
+        }
+        else{
+            window.alert('Invalid Number');
+            document.getElementById("txtMobile").focus();
+        }
+        var val=document.getElementById('txtEmailID').value;
+        if(/[a-zA-Z0-9._-]{6,12}[@][a-z]{3-15}[.][a-z]{2,6}/.test(val))
+        {
+            window.alert('Valid EmailID');
+        }
+        else
+        {
+            window.alert('Invalid EmailID');
+        }
+        </script>
+    </head>
+    <body>
+        <h2 style="color:red;"align="center">Registration Form</h2>
+        <table align="center">
+            <tr>
+                <td>USER NAME</td>
+                <td>
+        <input type="text" id="txtusername" placeholder="Enter User Name"></td></tr>
+        <tr>
+            <td>DATE OF BIRTH</td>
+            <td>
+                <input type="date"  placeholder="Enter Date">
+            </td>
+        </tr>
+        <tr>
+            <td>EMAIL ID</td>
+            <td>
+                <input type="email" id="txtEmailID" placeholder="Enter EmailId">
+            </td>
+        </tr>
+        <tr>
+            <td>MOBILE NO</td>
+            <td>
+                <input type="number" id="txtMobile" placeholder="Enter Number">
+            </td>
+        </tr>
+        <tr>
+            <td>PASSWORD</td>
+            <td><input type="password" id="txtpass" /></td>
+        </tr>
+        <tr>
+            <td>DEPARTMENT</td>
+            <td><select style="width: 100%;">
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>MECH</option>
+                <option>EEE</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>ADDRESS</td>
+            <td>
+            <textarea rows="8" cols="10" style="width: 100%;"></textarea>  
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center" colspan="2">
+        <button type="button" onclick="myfun()">Submit</button></td></tr>
+        </table>
+    </body>
+</html>

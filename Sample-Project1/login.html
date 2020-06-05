@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link href="Sample.css" rel="StyleSheet"/>
+        <script>
+            function myfun(){
+
+                var user = document.getElementById("txtusername").value;
+                if(/^[A-Z][a-z0-9]{4,8}$/.test(user)){
+                    window.alert("valid ");
+                }
+                else{
+                    window.alert("invalid");
+                    doucment.getElementById("txtusername").focus();
+                }
+                
+                var pass = document.getElementById("txtpass").value;
+                if(/[A-Za-z0-9@$&]{6,20}$/.test(pass)){
+
+                    window.alert("valid password");
+
+                }
+                else{
+                    window.alert("invalid password");
+                    doucment.getElementById("txtpass").focus();
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th colspan="2"><p>LOGIN DETAILS</p></th>
+            </tr>
+            <tr>
+                <td align="center">
+                    <label for="UserID">UserID</label>
+                </td>
+                <td>
+                    <input type="text" id="txtUserID"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <label for="Password">Password</label>
+                </td>
+                <td>
+                    <input type="password" id="txtpassword"/>
+                </td>
+            </tr>
+            <td colspan="2" align="center">
+                <button type="button" onclick="return myfun()">Submit</button>
+            </td>
+            </tr>
+        </table>
+    </body>
+</html>
