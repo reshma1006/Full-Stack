@@ -1,0 +1,42 @@
+.a1{
+    float: left;
+    margin:3px;
+}
+.a2{
+    float: right;
+    margin: 3px;
+}
+.a3{
+    font-size: 100%;
+    font-style: normal;
+    text-align: center;
+    text-decoration-color: blue;
+}
+ul{
+    list-style-type: none;
+    text-align: center;
+    padding: 5%;
+}
+ul a{
+    display: inline-block;
+    border-radius: 10%;
+    color: crimson;
+    margin: 10px;
+    background-color: burlywood;
+    padding: 20px;
+}
+.a5{
+    float: left;
+    border: black;
+    margin: 20px;
+}
+.a6{
+    text-align: center;
+    font-style: italic;
+    text-decoration-color: blueviolet;
+    text-emphasis-color: red;
+    font-size: x-large;
+    border-color: chocolate;
+    border-width: 3px;
+    padding: 5px;
+}
