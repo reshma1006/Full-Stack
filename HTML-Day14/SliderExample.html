@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slider Design</title>
+        <link rel="StyleSheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css"/>
+        <script type="text/javascript" src="bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="bootstrap-4.5.0-dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="bxslider-4-4.2.12/src/js/jquery.bxslider.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+  $('.bxslider').bxSlider({
+    mode: 'fade',
+    captions: true,
+    slideWidth: 600
+  });
+});
+</script>
+</head>
+<body>
+<div class="bxslider">
+  <div><img src="/assets/images/coffee1.jpg" title="Funky roots"></div>
+  <div><img src="/assets/images/coffee2.jpg" title="The long and winding road"></div>
+  <div><img src="/assets/images/coffee3.jpg" title="Happy trees"></div>
+</div>
+</body>
+</html>
