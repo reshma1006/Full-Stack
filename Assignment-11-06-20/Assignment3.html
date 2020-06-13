@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="jquery/jquery.min.js"></script>
+    <link rel="StyleSheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css" />
+    <script src="bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .feedback-form {
+            width: 340px;
+            margin: 50px auto;
+        }
+        .feedback-form form {
+            margin-bottom: 15px;
+            background: #f7f7f7;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            padding:30px;
+        }
+        .feedback-form h2 {
+            margin: 0 0 15px;
+        }
+        .form-control, .btn {
+            min-height: 38px;
+            border-radius: 2px;
+        }
+        .btn {        
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .a1{
+            height: 200px;   
+            text-align: center;
+         }
+         .a2{
+             height: 43px;
+         }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+                $("#btnregister").click(function(){
+                    var val1 = $("#name").val();
+                    var val2 = $("#dob").val();
+                    var val3 = $("#txtphnno").val();
+                    var val4 = $("#txtfeedback").val();
+                    var dob = /^[0-9]{2}[/][0-9]{2}[/][0-9]{4}$/ ;
+                    var ph = /^[+][9][1][6-9][0-9]{9}$/;
+                    if(val1 == '' || val2 == '' || val3 == '' || val4 =='' )
+                    {
+                        $('input[type="text"]').css("border","2px solid red");
+                        $('input[type="feedback"]').css("border","2px solid red");
+                        window.alert('please fill all the sections');
+                    }
+                    else if(!dob.test(val2))
+                    {
+                        alert('enter valid dob(dd/mm/yy)')
+                    }
+                    else if(!ph.test(val3))
+                    {
+                        alert('enter valid phone number(your 10 digit number starting with +91)');
+                    }
+                    else{
+                        alert('registration succesfull');//we can pass this username and password to the server side
+                    }
+                });
+            });
+    </script>
+</head>
+<body>
+    <div class="feedback-form">
+        <form action="/examples/actions/confirmation.php" method="post">
+            <h2 class="text-center">Feedback Form</h2>  
+            <p>You can give your feedback here.</p>     
+            <div class="form-group">
+                <input type="text" id="name" class="form-control" name="name" placeholder="Name" required="required">
+            </div>
+            <div class="form-group">
+                <input type="dob" id="dob" class="form-control" name="dob" placeholder="Date Of Birth(dd/mm/yy)" required="required">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="txtphnno" name="Number" placeholder="Mobile Number" required="required">
+            </div>    
+            <div class="form-group">
+                <input type="feedback" class="form-control a1" id="txtfeedback" name="feedback" placeholder="Feedback here" required="required">
+            </div> 
+            <div class="form-group">
+                <input type="file" class="form-control a2" id="txtfeedback" name="feedback" placeholder="attach any file here" required="required">
+            </div>
+            <div class="form-group">
+                <label class="checkbox-inline">
+                    <input type="checkbox" required="required"> I accept the <a href="">Terms</a> &amp;
+                    <a href="">Privacy Policy</a>
+                </label>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-success btn-block" id="btnregister">Submit Feedback</button>
+            </div>
+        </form>
+    </div>
+</body> 
+</html>  
